@@ -10,8 +10,8 @@ exports.create = (req, res) => {
   }
 
   //   create a user
-  const { id, email, phone_number } = req.body;
-  const user = new User(id, email, phone_number);
+  const { user_id, email, phone_number } = req.body;
+  const user = new User(user_id, email, phone_number);
 
   //   Save user in the dataase
   User.create(user, (err, data) => {
